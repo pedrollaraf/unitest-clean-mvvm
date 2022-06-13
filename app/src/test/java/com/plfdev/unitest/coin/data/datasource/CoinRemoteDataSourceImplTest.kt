@@ -78,4 +78,60 @@ class CoinRemoteDataSourceImplTest(): AutoCloseKoinTest() {
         return gson.fromJson(readFileFromResources("coins.json"),arrayTutorialType)
     }
 
+/*    @Test
+    fun `get answer returns error`() = runBlocking {
+        val response = MockResponse()
+            .setResponseCode(HttpURLConnection.HTTP_INTERNAL_ERROR)
+            .setBody("unknown error")
+        mockRetrofitHelper.mockServer.enqueue(response)
+        var result: GetAnswerResponse? = null
+        var exception: Exception? = null
+        try {
+            result = dataSource.getAnswer(1L, 1L)
+        } catch (e: Exception) {
+            exception = e
+        }
+        result shouldBe null
+        exception.shouldBeInstanceOf<NetworkException>()
+        exception.message shouldBe "unknown error"
+
+        @Test
+    fun `get answer invalid session error`() = runBlocking {
+        val response = MockResponse()
+            .setResponseCode(HttpURLConnection.HTTP_UNAUTHORIZED)
+            .setBody(SessionException.SESSION_EXCEPTION_MESSAGE)
+        mockRetrofitHelper.mockServer.enqueue(response)
+        var result: GetAnswerResponse? = null
+        var exception: Exception? = null
+        try {
+            result = dataSource.getAnswer(1L, 1L)
+        } catch (e: Exception) {
+            exception = e
+        }
+        result shouldBe null
+        exception.shouldBeInstanceOf<NetworkException>()
+        exception.message shouldBe SessionException.SESSION_EXCEPTION_MESSAGE
+    }
+
+    @Test
+    fun `get answer invalid api key error`() = runBlocking {
+        val response = MockResponse()
+            .setResponseCode(HttpURLConnection.HTTP_BAD_REQUEST)
+            .setBody(InvalidApiKeyException.INVALID_API_KEY_MESSAGE)
+        mockRetrofitHelper.mockServer.enqueue(response)
+        var result: GetAnswerResponse? = null
+        var exception: Exception? = null
+        try {
+            result = dataSource.getAnswer(1L, 1L)
+        } catch (e: Exception) {
+            exception = e
+        }
+        result shouldBe null
+        exception.shouldBeInstanceOf<NetworkException>()
+        exception.message shouldBe InvalidApiKeyException.INVALID_API_KEY_MESSAGE
+    }
+
+
+    }*/
+
 }
