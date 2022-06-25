@@ -2,10 +2,10 @@ package com.plfdev.unitest.coin.data.datasource
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.plfdev.unitest.coin.common.FileReaderHelper.readFile
-import com.plfdev.unitest.coin.common.FileReaderHelper.readFileFromResources
-import com.plfdev.unitest.coin.data.datasource.remote.implementation.CoinRemoteDataSourceImpl
-import com.plfdev.unitest.coin.data.datasource.service.CoinApi
+import com.plfdev.unitest.common.FileReaderHelper.readFile
+import com.plfdev.unitest.common.FileReaderHelper.readFileFromResources
+import com.plfdev.unitest.coins.data.datasource.remote.implementation.CoinRemoteDataSourceImpl
+import com.plfdev.unitest.coins.data.datasource.service.CoinApi
 import io.kotest.matchers.should
 import io.kotest.matchers.shouldBe
 import okhttp3.OkHttpClient.Builder
@@ -22,7 +22,6 @@ import org.koin.test.AutoCloseKoinTest
 import org.koin.test.inject
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
 
 
 class CoinRemoteDataSourceImplTest(): AutoCloseKoinTest() {

@@ -1,8 +1,9 @@
 package com.plfdev.unitest.coin.data.repository
 
-import com.plfdev.unitest.coin.common.MockCoinFactory
-import com.plfdev.unitest.coin.common.exception.CoinException
-import com.plfdev.unitest.coin.data.datasource.remote.implementation.CoinRemoteDataSourceImpl
+import com.plfdev.unitest.common.MockCoinFactory
+import com.plfdev.unitest.common.exception.CoinException
+import com.plfdev.unitest.coins.data.datasource.remote.implementation.CoinRemoteDataSourceImpl
+import com.plfdev.unitest.coins.data.repository.CoinRepositoryImpl
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
 import io.mockk.mockk

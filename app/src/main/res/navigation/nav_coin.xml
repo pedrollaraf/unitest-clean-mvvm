@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/coinsFragment"
+    android:id="@+id/nav_coin">
+
+    <fragment
+        android:id="@+id/coinsFragment"
+        android:name="com.plfdev.unitest.coins.presenter.ui.fragment.CoinsFragment"
+        android:label="CoinsFragment"
+        tools:layout="@layout/fragment_coins">
+
+        <action
+            android:id="@+id/action_coinsFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.plfdev.unitest.statistics.presenter.ui.fragment.StatisticsFragment"
+        android:label="StatisticsFragment"
+        tools:layout="@layout/fragment_statistics">
+
+        <argument
+            android:name="ticker"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+    </fragment>
+
+</navigation>

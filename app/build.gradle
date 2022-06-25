@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -89,7 +90,7 @@ dependencies {
     //endregion
 
     //region Dependency Injection Koin
-    def version_koin = '3.1.5'
+    def version_koin = '3.1.6'
     implementation "io.insert-koin:koin-android:$version_koin"
     testImplementation "io.insert-koin:koin-test:$version_koin"
     testImplementation "io.insert-koin:koin-test-junit4:$version_koin"
@@ -105,6 +106,12 @@ dependencies {
     def version_coroutines = "1.5.2"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version_coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version_coroutines"
+    //endregion
+
+    //region Navigation Component
+    def version_navigation_component = "2.4.2"
+    implementation "androidx.navigation:navigation-fragment-ktx:$version_navigation_component"
+    implementation "androidx.navigation:navigation-ui-ktx:$version_navigation_component"
     //endregion
 
 }

@@ -5,6 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="6dp"
     android:id="@+id/card_coin"
+    android:clickable="true"
+    android:focusable="true"
     app:cardCornerRadius="10dp"
     app:cardElevation="8dp">
 
